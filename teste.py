@@ -5,7 +5,7 @@ string = 'olá'
 
 output_bucket = "pipelines-golden"
 
-storage_source = f'teste'
+storage_source = 'teste/texto.txt'
 
 client = storage.Client()
 
