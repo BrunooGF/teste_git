@@ -1,7 +1,7 @@
 from google.cloud import storage
 
 
-string = 'olá mundo'
+string = 'olá mundo!'
 
 output_bucket = "pipelines-golden"
 
