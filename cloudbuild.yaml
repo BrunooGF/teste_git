@@ -1,0 +1,15 @@
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        # Configurar as credenciais do Google Cloud
+        echo $GCLOUD_SERVICE_KEY > /builder/home/service-key.json
+        gcloud auth activate-service-account --key-file=/builder/home/service-key.json
+        
+        # Instalar as dependências necessárias
+        pip install google-cloud-storage
+        
+        # Executar o script Python
+        python teste.py
